@@ -62,6 +62,9 @@
       "prettier --write --ignore-unknown"
     ]
   },
+  "prisma": {
+    "schema": "src/modules/database/schema.prisma"
+  },
   "jest": {
     "moduleFileExtensions": [
       "js",
