@@ -79,15 +79,15 @@ http://localhost:3001/docs
 - ✅ Allow clients to fetch the top 10 players by rating
 - ✅ Docker
 - ✅ Test cases are created
-- ✅ End-to-end
 - ✅ Database(MySQL) for persistent data storage.
 - ✅ Add Swagger UI.
 - ✅ Husky for git commits.
 
 
 #### Todo:
+- 💡 End-to-end
 - 💡 Follow the SOLID rules. For example, write an interface for the rating system.
 - 💡 Caching with redis
 - 💡 More API endpoint
-- 💡 Include API versioning,
+- 💡 Include API versioning, 
 - 💡 rate-limiting, 
