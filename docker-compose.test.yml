@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  db-mysql-test:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'aurory-back-test'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: '12345678'
+      MYSQL_ROOT_PASSWORD: '12345678'
+
+    ports:
+      - '3308:3306'
+    volumes:
+      - my-db-test:/var/lib/mysql
+
+  backend-rating-test:
+    container_name: backend-rating-test
+    build:
+      context: .
+      target: testing
+      args:
+        - NODE_ENV=test
+    environment:
+      DATABASE_URL: 'mysql://root:12345678@db-mysql-test:3306/aurory-back-test'
+    depends_on:
+      - db-mysql-test
+
+volumes:
+  my-db-test:

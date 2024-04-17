@@ -11,8 +11,9 @@ WORKDIR /usr/src/app
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install
 COPY . .
-RUN pnpm run build
 RUN pnpx prisma generate
+
+RUN pnpm run build
 
 #FROM base AS production
 #ARG NODE_ENV=production
@@ -26,3 +27,10 @@ RUN pnpx prisma generate
 RUN chmod +x ./start.sh
 
 CMD ["/bin/sh","start.sh"]
+
+FROM development as testing
+
+ENV NODE_ENV=test
+RUN chmod +x ./start.test.sh
+
+CMD ["/bin/sh","start.test.sh"]
