@@ -78,16 +78,16 @@ http://localhost:3001/docs
 - ✅ Allow clients to fetch rating data for a given player
 - ✅ Allow clients to fetch the top 10 players by rating
 - ✅ Docker
-- ✅ Test cases are created
+- ✅ Unit Tests
+- ✅ End-to-end Tests
 - ✅ Database(MySQL) for persistent data storage.
 - ✅ Add Swagger UI.
 - ✅ Husky for git commits.
 
 
 #### Todo:
-- 💡 End-to-end
 - 💡 Follow the SOLID rules. For example, write an interface for the rating system.
 - 💡 Caching with Redis
-- 💡 More API endpoint
+- 💡 More API endpoint (e.g. get all players, get all matches, admin panel)
 - 💡 Include API versioning, 
 - 💡 rate-limiting, 

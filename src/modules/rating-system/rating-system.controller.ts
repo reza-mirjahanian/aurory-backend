@@ -29,7 +29,7 @@ export class RatingSystemController {
     description: 'Operation done successfully.',
   })
   async submitGame(@Body() gameResultDto: GameResultRequestDto) {
-    //todo 1) Extra validation: winners and losers should not share any common name with one another.
+    //todo 1) Additional check: Winners and losers should not have any common names with each other.
     return this.ratingSystemService.processGameResult(gameResultDto);
   }
 
