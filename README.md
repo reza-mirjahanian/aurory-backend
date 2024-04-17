@@ -87,7 +87,7 @@ http://localhost:3001/docs
 #### Todo:
 - 💡 End-to-end
 - 💡 Follow the SOLID rules. For example, write an interface for the rating system.
-- 💡 Caching with redis
+- 💡 Caching with Redis
 - 💡 More API endpoint
 - 💡 Include API versioning, 
 - 💡 rate-limiting, 
